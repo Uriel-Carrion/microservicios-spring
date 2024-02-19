@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:Uriel-Carrion/microservice-configs.git
+          default-label: main
+          clone-on-start: true
+          #username: user
+          #password: ghp_21xtzGSQocymgHAlsZTApjuZySIhffnZ4buzcD
+          ignore-local-ssh-settings: true
+          host-key-algorithm: ecdsa-sha2-nistp256
+          host-key: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
+          private-key: |
+            -----BEGIN EC PRIVATE KEY-----
+            Proc-Type: 4,ENCRYPTED
+            DEK-Info: AES-128-CBC,A7C362A3BD4DB11C9910DE949BD471D2
+            
+            k3/6TdAmYngy5Bc5hhKeGp9bUIVxsXqGbhtr30PI8X4YcJWkfFHZfsh30xq7V0C4
+            a0D2J1atpsd+o2ArCSqoLFQ0mGc+a44rb4+VHqW7qKAxpJGiAkDz8U70MnAGHObr
+            CzzpuUxshp083lEpA47/QHFrDKlv9AW4FeUTgAnHgrE=
+            -----END EC PRIVATE KEY-----
+          passphrase: microservices-configs
+server:
+  port: 7777
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
