@@ -20,6 +20,7 @@ public class ReportController {
         return ResponseEntity.ok(response);
     }
 
+
     @PostMapping()
     public ResponseEntity<String> postReport(@RequestBody String report) {
         return ResponseEntity.ok(this.reportService.saveReport(report));

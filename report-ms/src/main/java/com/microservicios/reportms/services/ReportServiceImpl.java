@@ -1,5 +1,6 @@
 package com.microservicios.reportms.services;
 
+
 import com.microservicios.reportms.helpers.ReportHelper;
 import com.microservicios.reportms.models.Company;
 import com.microservicios.reportms.models.WebSite;
@@ -8,6 +9,7 @@ import com.microservicios.reportms.repositories.CompaniesRepository;
 import com.microservicios.reportms.streams.ReportPublisher;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreakerFactory;
 import org.springframework.stereotype.Service;
 

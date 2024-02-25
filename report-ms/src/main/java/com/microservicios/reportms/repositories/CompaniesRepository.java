@@ -20,5 +20,4 @@ public interface CompaniesRepository {
 
     @DeleteMapping(path = "/companies-crud/company/{name}")
     void deleteByName(@PathVariable String name);
-
 }

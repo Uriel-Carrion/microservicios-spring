@@ -1,6 +1,7 @@
 package com.microservicios.reportms.streams;
 
 import lombok.AllArgsConstructor;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.stereotype.Component;
 
 @Component

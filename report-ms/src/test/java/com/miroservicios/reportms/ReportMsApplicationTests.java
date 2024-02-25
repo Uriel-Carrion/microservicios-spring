@@ -1,4 +1,4 @@
-package com.microservicios.reportms;
+package com.miroservicios.reportms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
